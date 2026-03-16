@@ -1,5 +1,9 @@
 def get_range_for_difficulty(difficulty: str):
     """Return (low, high) inclusive range for a given difficulty."""
+
+    #FIX: Here, refactored logic into logic utils.py with Copilent Agent
+    #FIX: Also fixed the logic to ensure that normal range is easier than hard range
+
     if difficulty == "Easy":
         return 1, 20
     if difficulty == "Normal":
@@ -36,6 +40,8 @@ def check_guess(guess, secret):
 
     outcome examples: "Win", "Too High", "Too Low"
     """
+    #FIX: Moved this from app.py to logic_utils.py, and kept the UI part in the app.py file
+
     try:
         guess_value = int(guess)
         secret_value = int(secret)

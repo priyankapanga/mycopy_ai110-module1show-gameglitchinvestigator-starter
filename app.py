@@ -99,6 +99,9 @@ if submit:
         st.session_state.history.append(guess_int)
 
         outcome = check_guess(guess_int, st.session_state.secret)
+        #FIX: Displayed the correct hint label with Copilot.
+        # # At first, it refactored but could not fix the bugs completely, so I highlighted the errors I found
+        # and asked it so specifically work on those, and it did!
         hint_by_outcome = {
             "Win": "🎉 Correct!",
             "Too High": "📉 Go LOWER!",
