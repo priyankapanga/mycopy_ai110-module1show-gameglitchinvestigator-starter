@@ -8,7 +8,7 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - List at least two concrete bugs you noticed at the start  
   (for example: "the secret number kept changing" or "the hints were backwards").
 
-The first time I ran it, it seemed fine when I typed the correct answer, but worked weird in the newgamee button and the hints displayed.
+The first time I ran it, it seemed fine when I typed the correct answer, but worked weird in the newgame button and the hints displayed.
 A few concrete bugs I found:
 
 1. The hints were opposite of what they should be. It said go higher, when it should've actually said go lower. For example, when the secret number was 87 and I entered 32, it told me to lower, when it should have told me to go higher.
@@ -25,7 +25,7 @@ A few concrete bugs I found:
 
 I used Copilot this time.
 Correct suggestions: The lines in app.py that were causing the issues. For most of them, it was able to find it, but could not give me clear directions for the reset issue. It also refactored well, keeping the UI component parts in app.py and moving the inner logic to the separate file.
-Incorrect/Misleading suggestions: When it refactored the program, it didn't correct the range issue correctly. It had kept the same error as before, where normal is 0-100. I highlighted that line, and then it helped to fix it.
+Incorrect/Misleading suggestions: When it refactored the program, it didn't correct the range issue correctly. It had kept the same error as before, where normal is 1-100. I highlighted that line, and then it helped to fix it.
 
 I learned a little bit more about creating pytests from how it decided to go about it as well. When I wasn't sure about why it made a change, I asked it to explain.
 
@@ -37,7 +37,7 @@ I learned a little bit more about creating pytests from how it decided to go abo
 - Did AI help you design or understand any tests? How?
 
 ---Answer
-I decided the bug was fixed when I tested it 5-10 times on streamlit. I manually ran the test on the website to check if the range-difficulty issue was fixed, if the range showed the correct values. I also checked it with the pytest, to check if the range for normal was indeed 0-50 and hard is 0-100. It asserts that both of those are true.
+I decided the bug was fixed when I tested it 5-10 times on streamlit. I manually ran the test on the website to check if the range-difficulty issue was fixed, if the range showed the correct values. I also checked it with the pytest, to check if the range for normal was indeed 1-50 and hard is 1-100. It asserts that both of those are true.
 
 I don't have a lot of experience with creating my own pytests, so I learned about how to create one(and that we needed to have it in a separate file/folder) and it is less complicated than I thought it was, so that was really nice.
 
