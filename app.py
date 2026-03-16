@@ -4,7 +4,7 @@ import streamlit as st
 def get_range_for_difficulty(difficulty: str):
     if difficulty == "Easy":
         return 1, 20
-    if difficulty == "Normal":
+    if difficulty == "Normal": # FIXME: logic breaks here
         return 1, 100
     if difficulty == "Hard":
         return 1, 50
@@ -34,8 +34,8 @@ def check_guess(guess, secret):
         return "Win", "🎉 Correct!"
 
     try:
-        if guess > secret:
-            return "Too High", "📈 Go HIGHER!"
+        if guess > secret: 
+            return "Too High", "📈 Go HIGHER!" # FIXME: logic breakes here
         else:
             return "Too Low", "📉 Go LOWER!"
     except TypeError:

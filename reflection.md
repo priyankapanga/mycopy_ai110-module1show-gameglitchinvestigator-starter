@@ -8,6 +8,11 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - List at least two concrete bugs you noticed at the start  
   (for example: "the secret number kept changing" or "the hints were backwards").
 
+The first time I ran it, it seemed fine when I typed the correct answer, but worked weird in the newgamee button and the hints displayed. 
+A few concrete bugs I found: 
+1. The hints were opposite of what they should be. It said go higher, when it should've actually said go lower. For example, when the secret number was 87 and I entered 32, it told me to lower, when it should have told me to go higher.  
+2. The newgame button: the secret score changed, but it did not seem to reset my score/history. 
+3. The difficulty toggle on the left: The range for "Normal" was more than the range for "Hard"
 ---
 
 ## 2. How did you use AI as a teammate?
@@ -16,7 +21,7 @@ Answer each question in 3 to 5 sentences. Be specific and honest about what actu
 - Give one example of an AI suggestion that was correct (including what the AI suggested and how you verified the result).
 - Give one example of an AI suggestion that was incorrect or misleading (including what the AI suggested and how you verified the result).
 
----
+I used Claude Code. 
 
 ## 3. Debugging and testing your fixes
 
